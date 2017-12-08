@@ -8,12 +8,12 @@ void Person::tweet(std::string msg) {
   notifyObservers();
 }
 
-std::vector<std::string> Person::getTweets() {
+std::vector<std::string> Person::getTweets() const {
   return tweets;
 }
 
-void Person::retweet(size_t id, const Person &other) const {
-  tweet(other.tweets.at(id));
+void Person::retweet(size_t id, const Person &other) {
+  tweet(other.getTweets().at(id));
 }
 
 void Person::notify(Publisher<Info> &whoNotified) {

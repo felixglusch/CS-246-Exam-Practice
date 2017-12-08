@@ -14,7 +14,7 @@ class Person : public Observer<Info>, public Publisher<Info> {
     Person(std::string name);
     void tweet(std::string msg);
     std::vector<std::string> getTweets() const;
-    void retweet(size_t id) const;
+    void retweet(size_t id, const Person &other);
     void notify(Publisher<Info> &whoNotified) override;
     Info getInfo() const override;
 };

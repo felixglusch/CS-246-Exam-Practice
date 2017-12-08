@@ -1,6 +1,6 @@
 CXX = g++
 CXXFLAGS = -std=c++14 -g -Wall -MMD -Werror=vla
-EXEC = mytwit
+EXEC = mytwitter
 OBJECTS = person.o main.o
 DEPENDS = ${OBJECTS:.o=.d}
 
